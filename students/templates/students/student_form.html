@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/student_form.css">
+</head>
+<body>
+    <h1>Register as a Student</h1>
+
+    <!-- Form for adding a student -->
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Render the form fields here -->
+        {{ form.as_p }}  <!-- This renders the form fields as paragraph elements -->
+
+        <!-- Submit button -->
+        <button type="submit">Add Student</button>
+    </form>
+
+    <!-- Link to go back to landing page or success page -->
+    <br>
+    <a href="{% url 'landing' %}">Back to Landing Page</a>
+</body>
+</html>
+
+
+
+
