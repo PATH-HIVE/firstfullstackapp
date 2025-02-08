@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure--2_*fs5u7hlxw87axgz4vj&0!ig*u)u9xihb@6(+_7f+yx*ot(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['pathhive21.pythonanywhere.com']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+
 
 
 # Application definition
@@ -124,7 +126,12 @@ USE_TZ = True
 import os
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'students/static')]
+STATIC_ROOT = '/home/pathhive21/dev_learning/static'
 
+
+# Media files (uploads)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/pathhive21/dev_learning/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
