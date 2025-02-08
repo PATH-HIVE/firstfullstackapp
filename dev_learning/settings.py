@@ -97,7 +97,14 @@ WSGI_APPLICATION = 'dev_learning.wsgi.application'
 import os
 import dj_database_url
 
-DATABASE_URL = os.getenv('DATABASE_URL')
+# DATABASE_URL = os.getenv('DATABASE_URL')
+
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://firstfullstackapppostgresql_user:P5hts1uz8b4HMGsrdsDo28jygYDYVuzG@dpg-cujnvbggph6c73bjb490-a.oregon-postgres.render.com/firstfullstackapppostgresql')
+
+DATABASES = {
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
+}
+# print(DATABASE_URL) 
 
 if DATABASE_URL:
     DATABASES = {
@@ -114,6 +121,8 @@ else:
             'PORT': '5432',
         }
     }
+
+    
 
 
 
