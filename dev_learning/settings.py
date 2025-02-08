@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure--2_*fs5u7hlxw87axgz4vj&0!ig*u)u9xihb@6(+_7f+yx*ot(
 DEBUG = True
 
 # ALLOWED_HOSTS = ['pathhive21.pythonanywhere.com']
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+# ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = [
+    "firstfullstackapp-myta.onrender.com",
+    "127.0.0.1",  # Keep this for local testing
+]
+
 
 
 
