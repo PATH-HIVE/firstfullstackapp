@@ -32,7 +32,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",  # Keep this for local testing
 ]
 
-
+# https://firstfullstackapp-myta.onrender.com/
+# add it to your readmefile
 
 
 # Application definition
