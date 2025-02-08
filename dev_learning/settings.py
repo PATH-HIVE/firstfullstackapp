@@ -76,19 +76,44 @@ WSGI_APPLICATION = 'dev_learning.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+# DATABASES = {
+#     'default': {
 
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dev_learning_db',
-        'USER': 'postgres',  
-        'PASSWORD': 'loveGod=21',
-        'HOST': 'localhost',
-        'PORT': '5432',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dev_learning_db',
+#         'USER': 'postgres',  
+#         'PASSWORD': 'loveGod=21',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+import os
+import dj_database_url
+
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'dev_learning_db',
+            'USER': 'postgres',  
+            'PASSWORD': 'loveGod=21',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
     }
 }
 
 
+
+
+#postgresql://firstfullstackapppostgresql_user:P5hts1uz8b4HMGsrdsDo28jygYDYVuzG@dpg-cujnvbggph6c73bjb490-a.oregon-postgres.render.com/firstfullstackapppostgresql
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
