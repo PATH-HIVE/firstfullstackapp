@@ -146,4 +146,42 @@ Follow these steps to set up the project locally:
       python manage.py runserver
       ```
 
+## 🚀 Deployment on Render
+
+### Usual Video Reference  
+[Deploy Django + PostgreSQL on Render (100% Free)](https://www.youtube.com/watch?v=wczWm8j4v9w&t=522s)
+
+Render provides:  
+✅ Free PostgreSQL database  
+✅ Free web service for Django  
+✅ Easy GitHub integration
+
+---
+
+### Step 1: Sign Up & Connect GitHub
+
+1. Go to [Render.com](https://render.com) and sign up (using GitHub makes it easy).
+
+2. Click **"New Web Service"** and select your Django GitHub repository.
+
+---
+
+### Step 2: Add PostgreSQL Database
+
+1. In the Render Dashboard, click **"New"** and select **"PostgreSQL"**.
+
+2. Choose the **Free Plan** and create the database.
+
+3. Once created, copy the connection string.
+
+4. Go back to your Web Service Settings → Click "Environment Variables."
+5. Add a new variable:
+Key: DATABASE_URL
+Value: Paste the PostgreSQL connection string from step 3.
+6. In the Render Dashboard, go to your Web Service → Click "Manual Deploy."
+7. Allow Render in Django Settings. 
+8. ALLOWED_HOSTS = ["your-app-name.onrender.com"]
+9. 
+
+
 Happy coding! 🚀
