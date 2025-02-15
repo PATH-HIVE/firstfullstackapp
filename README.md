@@ -181,7 +181,8 @@ Value: Paste the PostgreSQL connection string from step 3.
 6. In the Render Dashboard, go to your Web Service → Click "Manual Deploy."
 7. Allow Render in Django Settings. 
 8. ALLOWED_HOSTS = ["your-app-name.onrender.com"]
-9. 
+9. Push the changes to github.
+10. In the Render Dashboard, click "Manual Deploy" again to apply the changes.
 
 
 Happy coding! 🚀
